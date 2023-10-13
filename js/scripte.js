@@ -7,7 +7,7 @@ for (let item of items) {
         if (this.parentElement.classList.contains('one')){
             let colActive = document.querySelectorAll('.active');
             for (let active of colActive) {
-                console.log(active);
+                if(active.parentElement===this) continue;
                 active.classList.remove('active');
             }
         }
